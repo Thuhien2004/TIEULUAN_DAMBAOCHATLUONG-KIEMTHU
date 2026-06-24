@@ -12,6 +12,7 @@ from sklearn.metrics import adjusted_rand_score, completeness_score, silhouette_
 from sentence_transformers import SentenceTransformer
 ```
 
+
 # BƯỚC 1: THU THẬP VÀ ĐỊNH DẠNG DỮ LIỆU (DATA COLLECTION)
  
 ``` def step_1_data_collection():
