@@ -1,21 +1,20 @@
 # TIEULUAN_DAMBAOCHATLUONG-KIEMTHU_code chương trình
-# ==============================================================================
-# CHƯƠNG TRÌNH AI TỐI ƯU HÓA BỘ KIỂM THỬ THEO QUY TRÌNH 4 BƯỚC CHUẨN KHOA HỌC
-# Ngôn ngữ: Python | Nền tảng: PyCharm & Anaconda local
-# ==============================================================================
 
+# CHƯƠNG TRÌNH AI TỐI ƯU HÓA BỘ KIỂM THỬ THEO QUY TRÌNH 4 BƯỚC CHUẨN KHOA HỌC
+
+# Ngôn ngữ: Python | Nền tảng: PyCharm & Anaconda local
+```
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from sklearn.metrics import adjusted_rand_score, completeness_score, silhouette_score
 from sentence_transformers import SentenceTransformer
+```
 
-
-# ==============================================================================
 # BƯỚC 1: THU THẬP VÀ ĐỊNH DẠNG DỮ LIỆU (DATA COLLECTION)
-# ==============================================================================
-def step_1_data_collection():
+ 
+``` def step_1_data_collection():
     print("[Bước 1] Đang nạp và định dạng dữ liệu kịch bản kiểm thử thô...")
 
     # Giả lập dữ liệu trích xuất từ hệ thống quản lý kiểm thử (Jira/TestRail)
@@ -37,11 +36,10 @@ def step_1_data_collection():
     # Định dạng dữ liệu thô về cấu trúc bảng (DataFrame)
     df_raw = pd.DataFrame(mock_test_cases)
     return df_raw
+```
 
-
-# ==============================================================================
 # BƯỚC 2: XÂY DỰNG GROUND TRUTH THÔNG QUA GÁN NHÃN (ANNOTATION)
-# ==============================================================================
+```
 def step_2_build_ground_truth(df):
     print("[Bước 2] Đang tích hợp dữ liệu Ground Truth từ chuyên gia QA...")
 
@@ -53,10 +51,11 @@ def step_2_build_ground_truth(df):
     df['Ground_Truth'] = expert_labels
     return df
 
+```
 
-# ==============================================================================
 # BƯỚC 3: TIỀN XỬ LÝ DỮ LIỆU VÀ HUẤN LUYỆN AI (VECTORIZATION & CLUSTERING)
-# ==============================================================================
+
+```
 def step_3_ai_training_and_clustering(df):
     print("[Bước 3] Đang tiến hành tiền xử lý, trích xuất đặc trưng và phân cụm tự động...")
 
@@ -82,10 +81,11 @@ def step_3_ai_training_and_clustering(df):
 
     return df, X_vectors, best_k
 
+```
 
-# ==============================================================================
 # BƯỚC 4: ĐÁNH GIÁ MÔ HÌNH VÀ TRỰC QUAN HÓA (MODEL EVALUATION)
-# ==============================================================================
+
+```
 def step_4_model_evaluation(df, X_vectors, best_k):
     print("[Bước 4] Tiến hành đánh giá hiệu năng thuật toán dựa trên Ground Truth...")
     print("\n" + "=" * 20 + " BẢNG ĐỐI CHIẾU DỮ LIỆU THỰC TẾ " + "=" * 20)
@@ -122,10 +122,6 @@ def step_4_model_evaluation(df, X_vectors, best_k):
     print("-> Đã lưu ảnh kết quả 'ket_qua_giai_phap_4_buoc.png' vào thư mục dự án.")
     plt.show()
 
-
-# ==============================================================================
-# HÀM ĐIỀU KHIỂN CHÍNH (MAIN TRUCK RUNNER)
-# ==============================================================================
 if __name__ == "__main__":
     print("--- KHỞI CHẠY HỆ THỐNG MÔ PHỎNG KIỂM THỬ THÔNG MINH ---\n")
 
@@ -136,3 +132,5 @@ if __name__ == "__main__":
     step_4_model_evaluation(df_step3, vectors, optimized_k)
 
     print("--- QUY TRÌNH KẾT THÚC THÀNH CÔNG ---")
+
+```
