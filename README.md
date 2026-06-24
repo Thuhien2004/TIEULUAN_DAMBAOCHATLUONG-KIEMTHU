@@ -1,14 +1,14 @@
 # TIEULUAN_DAMBAOCHATLUONG-KIEMTHU_code chương trình
 
 # Ngôn ngữ: Python | Nền tảng: PyCharm & Anaconda local
-```
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from sklearn.metrics import adjusted_rand_score, completeness_score, silhouette_score
 from sentence_transformers import SentenceTransformer
-```
+
 
 
 # BƯỚC 1: THU THẬP VÀ ĐỊNH DẠNG DỮ LIỆU (DATA COLLECTION)
