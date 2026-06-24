@@ -1,7 +1,5 @@
 # TIEULUAN_DAMBAOCHATLUONG-KIEMTHU_code chương trình
 
-# CHƯƠNG TRÌNH AI TỐI ƯU HÓA BỘ KIỂM THỬ THEO QUY TRÌNH 4 BƯỚC CHUẨN KHOA HỌC
-
 # Ngôn ngữ: Python | Nền tảng: PyCharm & Anaconda local
 ```
 import pandas as pd
